@@ -9,6 +9,11 @@ h1 {
   color: #1db954;
 }
 
+#status {
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+
 .controls {
   display: flex;
   gap: 10px;
@@ -46,4 +51,8 @@ button {
   color: white;
   cursor: pointer;
   border-radius: 5px;
+}
+
+#playlist li {
+  margin-bottom: 8px;
 }
