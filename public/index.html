@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Library Management System</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <main class="container">
@@ -18,9 +19,75 @@
       </select>
     </section>
 
+    <section class="form-section">
+      <h2>Manage Artists</h2>
+      <form id="artist-form" class="track-form">
+        <input id="artist-name-input" type="text" placeholder="Artist name" required>
+        <input id="artist-country-input" type="text" placeholder="Country">
+        <div class="form-actions">
+          <button type="submit" id="artist-save-btn">Add Artist</button>
+          <button type="button" id="artist-cancel-btn" class="hidden">Cancel Edit</button>
+        </div>
+      </form>
+      <div id="artists" class="grid compact-grid"></div>
+    </section>
+
+    <section class="form-section">
+      <h2>Manage Albums</h2>
+      <form id="album-form" class="track-form">
+        <input id="album-title-input" type="text" placeholder="Album title" required>
+        <input id="album-year-input" type="number" min="1900" max="2100" placeholder="Release year">
+        <select id="album-artist-select" required>
+          <option value="">Select artist</option>
+        </select>
+        <div class="form-actions">
+          <button type="submit" id="album-save-btn">Add Album</button>
+          <button type="button" id="album-cancel-btn" class="hidden">Cancel Edit</button>
+        </div>
+      </form>
+      <div id="albums" class="grid compact-grid"></div>
+    </section>
+
+    <section class="form-section">
+      <h2>Manage Tracks</h2>
+      <form id="track-form" class="track-form">
+        <input id="title-input" type="text" placeholder="Track title" required>
+        <input id="duration-input" type="number" min="1" placeholder="Duration (sec)" required>
+        <select id="artist-select" required>
+          <option value="">Select artist</option>
+        </select>
+        <select id="album-select" required>
+          <option value="">Select album</option>
+        </select>
+        <select id="genre-select" required>
+          <option value="">Select genre</option>
+        </select>
+        <div class="form-actions">
+          <button type="submit" id="save-btn">Add Track</button>
+          <button type="button" id="cancel-btn" class="hidden">Cancel Edit</button>
+        </div>
+      </form>
+    </section>
+
     <section>
       <h2>Tracks</h2>
       <div id="tracks" class="grid"></div>
+    </section>
+
+    <section class="form-section">
+      <h2>Playlists</h2>
+      <form id="playlist-form" class="controls">
+        <input id="playlist-name-input" type="text" placeholder="New playlist name" required>
+        <button type="submit">Create Playlist</button>
+      </form>
+      <div class="controls">
+        <select id="playlist-select">
+          <option value="">Select playlist</option>
+        </select>
+        <button id="delete-playlist-btn" type="button" class="danger">Delete Playlist</button>
+      </div>
+      <div id="playlist-tracks" class="grid compact-grid"></div>
+      <canvas id="playlist-chart" height="100"></canvas>
     </section>
   </main>
 
