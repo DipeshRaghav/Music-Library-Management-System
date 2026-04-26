@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Music Library Pro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Library Management System</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+  <main class="container">
+    <h1>Music Library Management System</h1>
+    <p id="status">Loading...</p>
 
-<h1>🎵 Music Library Pro</h1>
-<p id="status"></p>
+    <section class="controls">
+      <input id="search" type="text" placeholder="Search by track or artist">
+      <select id="genre">
+        <option value="All">All Genres</option>
+      </select>
+    </section>
 
-<div class="controls">
-  <input id="search" placeholder="Search songs...">
-  
-  <select id="genre">
-    <option>All</option>
-  </select>
-</div>
+    <section>
+      <h2>Tracks</h2>
+      <div id="tracks" class="grid"></div>
+    </section>
+  </main>
 
-<h2>Tracks</h2>
-<div id="tracks" class="grid"></div>
-
-<h2>🎧 Playlist</h2>
-<ul id="playlist"></ul>
-
-<h2>📊 Analytics</h2>
-<canvas id="chart"></canvas>
-
-<script type="module" src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

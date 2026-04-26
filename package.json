@@ -1,7 +1,7 @@
 {
   "name": "music-library-management-system",
   "version": "1.0.0",
-  "description": "This project implements a Music Library Management System using SQL. It manages artists, albums, tracks, genres, and playlists.",
+  "description": "Fresh Music Library Management System with MySQL",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
@@ -24,7 +24,7 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "mysql2": "^3.22.1"
+    "mysql2": "^3.22.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
